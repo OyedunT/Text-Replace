@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container{
+        border: 1px solid blue;
+        width: 40%;
+        height: 40vh;
+        background-color: rgb(235, 202, 160);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 20px 20px 20px black;
+        position: absolute;
+        left: 30%;
+        top: 30%;
+        /*   */
+        /* flex-direction: column;
+        justify-content: center; */
+
+    }
+    #input{
+        width: 300px;
+        height: 50px;
+        position: relative;
+        left: 40px;
+        top: 40px;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        overflow: hidden;
+    }
+
+    #output{
+        position: relative;
+        top: 50px;
+        right: 30px;
+        float: right;
+        height: 7vh;
+        border-radius: 5px;
+        background-color: rgb(107, 123, 212);
+        border: none;
+        color: #fff;
+    }
+    #view{
+        padding-left: 15px;
+        word-wrap:break-word;
+        
+        
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 id="view"></h1>
+      <div>
+        <input id="input" type="text" placeholder="Enter Your Text!">
+      <button id="output" onclick="display()">Enter</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  function display() {
+    let input = document.getElementById("input").value;
+    let output = (document.getElementById("view").innerHTML = input.replace(
+      "Fuck",
+      "****"
+    ).replace('Fool','good').replace('idiot','nice').replace('weak','brave'));
+    
+  }
+</script>
